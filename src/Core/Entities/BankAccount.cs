@@ -81,11 +81,11 @@ public class BankAccount
         var report = new System.Text.StringBuilder();
 
         decimal balance = 0;
-        report.AppendLine("Date\t\tAmount\tBalance\tNote");
+        report.AppendLine("Date\t\tAmount\tBalance\tNote\t\tAccount Type");
         foreach (var item in _allTransactions)
         {
             balance += item.Amount;
-            report.AppendLine($"{item.Date.ToShortDateString()}\t{item.Amount}\t{balance}\t{item.Notes}");
+            report.AppendLine($"{item.Date.ToShortDateString()}\t{item.Amount}\t{balance}\t{item.Notes}\t{this.GetType().Name}");
         }
 
         return report.ToString();
