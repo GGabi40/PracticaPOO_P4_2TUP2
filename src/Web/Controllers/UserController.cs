@@ -47,7 +47,8 @@ public class UserController : ControllerBase
             createUserRequest.FirstName,
             createUserRequest.LastName,
             createUserRequest.Email,
-            createUserRequest.Phone);
+            createUserRequest.Phone,
+            createUserRequest.Password);
         return Ok(user);
     }
 

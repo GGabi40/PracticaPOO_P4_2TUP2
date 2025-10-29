@@ -37,4 +37,7 @@ public class User
 
     [MaxLength(25)]
     public string Phone { get; set; } = string.Empty;
+
+    [Required]
+    public string Password { get; set; }
 }

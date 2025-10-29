@@ -41,7 +41,8 @@ namespace Infrastructure.Data
                 FirstName = "Admin",
                 LastName = "1",
                 Phone = "123456789",
-                Id = 1
+                Id = 1,
+                Password = "12345"
             }];
 
             return result;

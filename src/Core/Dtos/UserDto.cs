@@ -3,7 +3,7 @@ using Core.Entities;
 
 namespace Core.Dtos;
 
-public record UserDto(int Id,Guid ExternalId, string UserName, string FirstName, string LastName, string Email, string Phone)
+public record UserDto(int Id,Guid ExternalId, string UserName, string FirstName, string LastName, string Email, string Phone, string Password)
 {
     public static UserDto Create(User user)
     {
@@ -14,7 +14,8 @@ public record UserDto(int Id,Guid ExternalId, string UserName, string FirstName,
             user.FirstName,
             user.LastName,
             user.Email,
-            user.Phone
+            user.Phone,
+            user.Password
            );
 
     }

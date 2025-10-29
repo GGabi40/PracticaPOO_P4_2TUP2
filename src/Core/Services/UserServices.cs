@@ -38,7 +38,7 @@ public class UserServices
         return UserDto.Create(user);
     }
 
-public UserDto CreateUser( string UserName, string FirstName, string LastName, string Email, string Phone)
+public UserDto CreateUser( string UserName, string FirstName, string LastName, string Email, string Phone, string Password)
 {
     var user = _userRepository.Add(new User
     {
@@ -46,7 +46,8 @@ public UserDto CreateUser( string UserName, string FirstName, string LastName, s
         FirstName = FirstName,
         LastName = LastName,
         Email = Email,
-        Phone = Phone
+        Phone = Phone,
+        Password = Password
     });
     _userRepository.SaveChanges();
     return UserDto.Create(user);
